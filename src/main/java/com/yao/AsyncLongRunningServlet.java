@@ -21,8 +21,10 @@ public class AsyncLongRunningServlet extends HttpServlet {
                 + Thread.currentThread().getName() + "::ID="
                 + Thread.currentThread().getId());
 
-
         String time = request.getParameter("time");
+        if(time==null){
+            time="10";
+        }
         int secs = Integer.valueOf(time);
         // max 10 seconds
         if (secs > 10)

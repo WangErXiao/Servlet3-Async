@@ -14,6 +14,16 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>asyncLongRunningServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/asyncLongRunningServlet</url-pattern>
+    </servlet-mapping>
+    <!--jetty contination servlet-->
+    <servlet>
+        <servlet-name>jettyContinationServlet</servlet-name>
+        <servlet-class>com.yao.jetty.continuation.SimpleSuspendResumeServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jettyContinationServlet</servlet-name>
+        <url-pattern>/jettyContinationServlet</url-pattern>
     </servlet-mapping>
 </web-app>
